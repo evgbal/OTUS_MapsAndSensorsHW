@@ -1,8 +1,6 @@
 package com.sample.otuslocationmapshw.camera
 
-import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.pm.PackageManager
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -16,7 +14,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageCapture
-import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
@@ -63,7 +60,7 @@ class CameraActivity : AppCompatActivity() {
 
         // TODO("Получить экземпляр SensorManager")
         // TODO("Добавить проверку на наличие датчика акселерометра и присвоить значение tiltSensor")
-        tiltSensor = ...
+        tiltSensor = TODO("Get tilt sensor")
         cameraProviderFuture.addListener({
             cameraProvider = cameraProviderFuture.get()
         }, ContextCompat.getMainExecutor(this))
@@ -126,7 +123,7 @@ class CameraActivity : AppCompatActivity() {
 
             // TODO("Добавить вызов CameraX для фото")
             // TODO("Вывести Toast о том, что фото успешно сохранено и закрыть текущее активити c указанием кода результата SUCCESS_RESULT_CODE")
-            imageCapture...
+            // imageCapture...
         }
     }
 
@@ -172,8 +169,8 @@ class CameraActivity : AppCompatActivity() {
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
         private const val REQUEST_CODE_PERMISSIONS = 10
         // TODO("Указать набор требуемых разрешений")
-        private val REQUIRED_PERMISSIONS = mutableListOf(
-            ...
+        private val REQUIRED_PERMISSIONS: Array<String> = mutableListOf<String>(
+            // TODO("Добавить требуемые разрешения")
         ).toTypedArray()
 
         const val SUCCESS_RESULT_CODE = 15
